@@ -5,8 +5,8 @@
 class Matrix {
 private:
     double* data;       // Указатель на массив с элементами матрицы
-    size_t rows;        // Количество строк
-    size_t cols;        // Количество столбцов
+    size_t rows;        // Количество строк M
+    size_t cols;        // Количество столбцов N
 
 public:
     // 1. КОНСТРУКТОР ПО УМОЛЧАНИЮ - создает пустую матрицу
@@ -73,7 +73,7 @@ public:
     Matrix(size_t m, size_t n) : rows(m), cols(n) {
         std::cout << "Вызван конструктор с размерами " << m << "x" << n << std::endl;
         
-        // Проверяем валидность размеров
+        // Проверяем размеры
         if (rows == 0 || cols == 0) {
             data = nullptr;
         } else {
