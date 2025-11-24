@@ -65,7 +65,7 @@ Complex& Complex::operator-=(const Complex& other) {
 
 Complex& Complex::operator*=(const Complex& other) {
     double new_real = real * other.real - imag * other.imag;
-    double new_imag = real * other.imag + imag * other.imag;
+    double new_imag = real * other.imag + imag * other.real;
     real = new_real;
     imag = new_imag;
     return *this;
